@@ -1,0 +1,126 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    background: url('https://i.pinimg.com/originals/57/67/6c/57676c045db2fe6bd13963478eaad76f.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
+}
+
+.upload-container {
+    position: relative; /* To stay above the background overlay */
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85); /* Slight transparency */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+.upload-container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.file-input {
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0066cc;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.file-input:hover {
+    background-color: #004d99;
+}
+
+#file-label {
+    margin-top: 20px;
+    color: #e0e0e0;
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.upload-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #28a745;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.upload-btn:hover {
+    background: #218838;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#progress-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e0e0e0; /* Light color to match the new theme */
+}
+
+.copy-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background: #ff5722; /* Changed to orange to match the theme */
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.copy-btn:hover {
+    background: #e64a19;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio File Upload</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="upload-container">
+            <h1>Upload Your Audio File</h1>
+            <input type="file" id="file-input" class="file-input" accept="audio/*">
+            <div id="file-label">No file chosen</div>
+            <button class="upload-btn" onclick="uploadFile()">Upload</button>
+
+            <div id="loading-message" style="display: none; margin-top: 20px;">
+                <div class="spinner"></div> Loading... Please wait.
+            </div>
+
+            <div id="progress-bar-container" style="display: none; margin-top: 20px;">
+                <progress id="progress-bar" value="0" max="100"></progress>
+                <span id="progress-percent">0%</span>
+            </div>
+
+            <div id="transcription-container" style="display: none; margin-top: 20px;">
+                <h2>Transcription Result:</h2>
+                <textarea id="transcription-text" rows="4" cols="50" readonly></textarea>
+                <button class="copy-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
